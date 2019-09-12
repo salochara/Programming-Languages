@@ -1,0 +1,3 @@
+; Equivalent to foldl
+
+
