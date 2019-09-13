@@ -1,4 +1,3 @@
-#lang racket
 ; NextDay - Teacher Solution
 
 (define (leap? year)
@@ -23,7 +22,7 @@
         (
             [day(car date)]
             [month(cadr date)]
-            [year(cadr date)]
+            [year(caddr date)]
             [max_days (month-days month year)] ; Here, we already know the max days of the month given
         )
         (if (= day max_days) ;Is day equal to max days of the given month? (1)
@@ -36,4 +35,3 @@
     )
 )
 
-(next_day '(30 2 2016))
