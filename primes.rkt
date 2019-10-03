@@ -24,7 +24,7 @@ Primes Program
           resultList ; Return the list with all the prime-less-than number
       )
     )
-    (display "Unknown number") ; Needed as false statement for the if
+    (display "Unknown number") ; Needed as false statement for the if (< number 2)
   )
 )
   
