@@ -45,4 +45,26 @@ sister(X,Y) :- brothers(X,Y),female(X).
 % Si, X es papá de Y
 grandfather(X,Y) :- father()
 
+grandfather(X,Y) :- 
+    male(X),
+    father(Z,Y),
+    father(X,Z).
+
+grandmother(X,Y) :-
+    female(X),
+    mother(Z,Y),
+    mother(X,Z).
+
+grandchild(X,Y) :- 
+    (grandfather(Y,X); % or
+    grandmother(Y,X)).
+
+grandson(X,Y) :-
+    grandchild(X,Y),
+    male(X).
+
+granddaughter(X,Y) :-
+    grandchild(X,Y),
+    female(X).`
+
 
