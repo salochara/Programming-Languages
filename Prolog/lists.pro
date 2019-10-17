@@ -47,3 +47,14 @@ double_elements([H|T],[X|R]) :-
     X is H * 2, % head de mi respuesta es el primer head * 2
     double_elements(T,R). % use trace, (kind of debugger)to understand this!
 
+%%% Flat a list that may contain other lists
+% Base case fact
+tec_flatten([],[]).
+% When it is not a list
+tec_flatten(X,[X]) :-
+    \+ is_list(X). % \+ == not. It means, it is not provable. Bc '+' in Prolog means it's provable
+tec_flatten([H|T],R) :-
+    % is_list(H),
+    tec_flatten(H,FlatHead),
+    tec_flatten(T,FlatTail),
+    append(FlatHead,FlatTail,R).
