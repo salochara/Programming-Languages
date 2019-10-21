@@ -3,7 +3,7 @@
  Prolog Homework
  Assignment #6
  Developed by Salomón Charabati
- Source for the backtrace operator (!): https://pdfs.semanticscholar.org/c8ab/e6dc0b75597b7f9d5797871ea81466e99e50.pdf
+ Source for the backtarce operator (!): https://pdfs.semanticscholar.org/c8ab/e6dc0b75597b7f9d5797871ea81466e99e50.pdf
 */
 
 %% in_list: 
