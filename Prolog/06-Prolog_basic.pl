@@ -24,12 +24,12 @@ odd_length([Head|Tail]) :- % An odd list, is a list where the tail of the list i
     even_length(Tail).
 
 
-%% n_th_element: 
+%% element_at: 
 %% Take as argument an index and a list, and return the element at index n of the list. Indices start at 0.
-n_th_element(0,[X|L],X). % Base case. When X is at the head of the list.
-n_th_element(N,[Y|L],X) :- % If the element is not at the head, 
+element_at(0,[X|L],X). % Base case. When X is at the head of the list.
+element_at(N,[Y|L],X) :- % If the element is not at the head, 
     N1 is N-1, % substract 1 to the index passed
-    n_th_element(N1,L,X). % and call the function again with N1 and the rest of the list
+    element_at(N1,L,X). % and call the function again with N1 and the rest of the list
 
 %% is_permutation: 
 %% Take two lists as arguments, and determine if they are permutations of each other. That is, they have the exact same elements, but in different orders.
